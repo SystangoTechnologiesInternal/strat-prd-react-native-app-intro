@@ -6,20 +6,19 @@
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "react-native-app-intro@git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
-    "name": "react-native-app-intro",
-    "escapedName": "react-native-app-intro",
+    "raw": "git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
     "rawSpec": "git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
     "saveSpec": "git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
     "fetchSpec": "https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
     "gitCommittish": null
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git#05c793ebb51dd882d5c328b1a8c9ccf99d9433c2",
-  "_spec": "react-native-app-intro@git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
-  "_where": "/Users/MacBookpro15/Projects/PredictorApp",
+  "_resolved": "git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git#3448a998d1a6cf62d85e8b988c64417fa4768c8b",
+  "_spec": "git+https://github.com/SystangoTechnologiesInternal/strat-prd-react-native-app-intro.git",
+  "_where": "/Users/sgo4/Projects/PredictorApp",
   "author": "",
   "bugs": {
     "url": "https://github.com/fuyaode/react-native-app-intro/issues"

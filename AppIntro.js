@@ -131,13 +131,14 @@ export default class AppIntro extends Component {
     if (Platform.OS === 'ios') {
       context.scrollView.scrollTo({ y: 0, x });
     } else {
-      context.scrollView.setPage(diff);
+      context.scrollView.scrollTo({ y: 0, x });
       context.onScrollEnd({
         nativeEvent: {
           position: diff,
         },
-      });
+      });     
     }
+
     this.props.onNextBtnClick(context.state.index);
   }
 
@@ -265,6 +266,9 @@ export default class AppIntro extends Component {
   }
 
   renderChild = (children, pageIndex, index) => {
+
+                  //console.log('index=========', index, children)
+
     const level = children.props.level || 0;
     const { transform } = this.getTransform(pageIndex, 10, level);
     const root = children.props.children;
@@ -313,27 +317,27 @@ export default class AppIntro extends Component {
     if (pageArray.length > 0) {
       pages = pageArray.map((page, i) => this.renderBasicSlidePage(i, page));
     } else {
-      if (Platform.OS === 'ios') {
+      //if (Platform.OS === 'ios') {
         pages = childrens.map((children, i) => this.renderChild(children, i, i));
-      } else {
-        androidPages = childrens.map((children, i) => {
-          const { transform } = this.getTransform(i, -windowsWidth / 3 * 2, 1);
-          pages.push(<View key={i} />);
-          return (
-            <Animated.View key={i} style={[{
-              position: 'absolute',
-              height: windowsHeight,
-              width: windowsWidth,
-              top: 0,
-            }, {
-              ...transform[0],
-            }]}
-            >
-              {this.renderChild(children, i, i)}
-            </Animated.View>
-          );
-        });
-      }
+      // } else {
+      //   androidPages = childrens.map((children, i) => {
+      //     const { transform } = this.getTransform(i, -windowsWidth / 3 * 2, 1);
+      //     pages.push(<View key={i} />);
+      //     return (
+      //       <Animated.View key={i} style={[{
+      //         position: 'absolute',
+      //         height: windowsHeight,
+      //         width: windowsWidth,
+      //         top: 0,
+      //       }, {
+      //         ...transform[0],
+      //       }]}
+      //       >
+      //         {this.renderChild(children, i, i)}
+      //       </Animated.View>
+      //     );
+      //   });
+      // }
     }
 
     if (this.isToTintStatusBar()) {
